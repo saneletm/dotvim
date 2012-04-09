@@ -72,7 +72,7 @@ au FileType xml exe ":silent 1,$!xmllint --format --recover - 2>/dev/null"
 inoremap <F2> <ESC>u@. 
 
 "do autocorrect word"
-:source ~/.autocorrect.vim 
+:source ~/.vim/plugin/autocorrect.vim 
 
 
 "moving lines of text up and down using ctrl arrow key"
@@ -171,7 +171,6 @@ endfunction
 
 nmap <silent> ;s :call ToggleSpell()<CR>
 
-
 "Pathogen load 
 filetype off 
 call pathogen#infect()
@@ -196,20 +195,20 @@ let g:html_tag_case = 'lowercase'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Python section
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let python_highlight_all = 1
-au FileType python syn keyword pythonDecorator True None False self
-
-au BufNewFile,BufRead *.jinja set syntax=htmljinja
-au BufNewFile,BufRead *.mako set ft=mako
-
-au FileType python inoremap <buffer> $r return
-au FileType python inoremap <buffer> $i import
-au FileType python inoremap <buffer> $p print
-au FileType python inoremap <buffer> $f #--- PH " ----------------------------------------------<esc>FP2xi
-au FileType python map <buffer> <leader>1 /class
-au FileType python map <buffer> <leader>2 /def
-au FileType python map <buffer> <leader>C ?class
-au FileType python map <buffer> <leader>D ?def
+"let python_highlight_all = 1
+"au FileType python syn keyword pythonDecorator True None False self
+"
+"au BufNewFile,BufRead *.jinja set syntax=htmljinja
+"au BufNewFile,BufRead *.mako set ft=mako
+"
+"au FileType python inoremap <buffer> $r return
+"au FileType python inoremap <buffer> $i import
+"au FileType python inoremap <buffer> $p print
+"au FileType python inoremap <buffer> $f #--- PH " ----------------------------------------------<esc>FP2xi
+"au FileType python map <buffer> <leader>1 /class
+"au FileType python map <buffer> <leader>2 /def
+"au FileType python map <buffer> <leader>C ?class
+"au FileType python map <buffer> <leader>D ?def
 
 "Word auto complete
 :autocmd BufEnter * call DoWordComplete() 
