@@ -190,6 +190,7 @@ endif
 
 "html mode options
 let g:html_tag_case = 'lowercase'
+let g:no_html_tab_mapping = 'yes'
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
