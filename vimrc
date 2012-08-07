@@ -244,4 +244,4 @@ endfunction
 
   " Enable python folding
 let g:pymode_folding = 0
-let g:pymode_lint_ignore = "W901, E501"
+let g:pymode_lint_ignore = "E501, W901"
