@@ -12,13 +12,13 @@ files which include
   git clone git://github.com/nelstrom/dotvim.git ~/.vim
 
 ###Create symlinks:
-  *ln -s ~/.vim/vimrc ~/.vimrc
-  *ln -s ~/.vim/tmux.conf ~/.tmux.conf 
-  *ln -s ~/.vim/dotemacs ~/.emacs
-  *ln -s ~/.vim/dotelips ~/.elips
-  *ln -s ~/.vim/gvimrc ~/.gvimrc
+  * ln -s ~/.vim/vimrc ~/.vimrc
+  * ln -s ~/.vim/tmux.conf ~/.tmux.conf 
+  * ln -s ~/.vim/dotemacs ~/.emacs
+  * ln -s ~/.vim/dotelips ~/.elips
+  * ln -s ~/.vim/gvimrc ~/.gvimrc
 
 #####Switch to the `~/.vim` directory, and fetch vim submodules:
-  *cd ~/.vim
-  *git submodule init
-  *git submodule update
+  * cd ~/.vim
+  * git submodule init
+  * git submodule update
