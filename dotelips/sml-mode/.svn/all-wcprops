@@ -1,0 +1,95 @@
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/smlnj/!svn/ver/3723/sml-mode/trunk
+END
+makefile.pkg
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/smlnj/!svn/ver/3723/sml-mode/trunk/makefile.pkg
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/smlnj/!svn/ver/3513/sml-mode/trunk/README
+END
+BUGS
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/smlnj/!svn/ver/3513/sml-mode/trunk/BUGS
+END
+TODO
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/smlnj/!svn/ver/3723/sml-mode/trunk/TODO
+END
+sml-mode.spec
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/smlnj/!svn/ver/3719/sml-mode/trunk/sml-mode.spec
+END
+INSTALL
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/smlnj/!svn/ver/2069/sml-mode/trunk/INSTALL
+END
+sml-oldindent.el
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/smlnj/!svn/ver/3723/sml-mode/trunk/sml-oldindent.el
+END
+sml-mode.el
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/smlnj/!svn/ver/3723/sml-mode/trunk/sml-mode.el
+END
+NEWS
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/smlnj/!svn/ver/3723/sml-mode/trunk/NEWS
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/smlnj/!svn/ver/3513/sml-mode/trunk/Makefile
+END
+.bzrignore
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/smlnj/!svn/ver/3718/sml-mode/trunk/.bzrignore
+END
+sml-mode.texi
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/smlnj/!svn/ver/3513/sml-mode/trunk/sml-mode.texi
+END
+ChangeLog
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/smlnj/!svn/ver/3723/sml-mode/trunk/ChangeLog
+END
+testcases.sml
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/smlnj/!svn/ver/3722/sml-mode/trunk/testcases.sml
+END
+sml-proc.el
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/smlnj/!svn/ver/3723/sml-mode/trunk/sml-proc.el
+END
