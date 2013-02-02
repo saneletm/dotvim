@@ -3,10 +3,10 @@ README.md
 This is a repository for my linux configuration
 files which include 
 
- * _ vim files (.vim and plugins) _
- * _ lxterminal ("locate") _
- * _ tmux config (.tmux.conf) _
- * _ emacs config (.emacs, dotelips) _
+ * _vim files (.vim and plugins)_
+ * _lxterminal ("locate")_
+ * _tmux config (.tmux.conf)_
+ * _emacs config (.emacs, dotelips)_
 
 ###Setting up
 ---
