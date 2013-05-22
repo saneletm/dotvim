@@ -245,3 +245,6 @@ au FileType javascript inoremap <buffer> $f //--- PH " -------------------------
   " Enable python folding
 let g:pymode_folding = 0
 let g:pymode_lint_ignore = "E501, W901"
+
+"toggle tagbar
+nmap <F8> :TagbarToggle<CR>
