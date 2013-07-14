@@ -1,6 +1,11 @@
 #!/bin/bash                                                                                              
 
-SESSIONNAME="reports"
+if [ "$#" == "0" ]; then
+  SESSIONNAME="reports"
+else
+  SESSIONNAME="$1"
+fi
+
 tmux has-session -t $SESSIONNAME &> /dev/null
 
 if [ $? != 0 ] 
