@@ -1,7 +1,11 @@
 #!/bin/bash                                                                                              
 
+<<<<<<< HEAD
 if [ -z "$1" ]
 then
+=======
+if [ "$#" == "0" ]; then
+>>>>>>> 040723b3aa705da76f93e76ad875e7308a79f04c
   SESSIONNAME="reports"
 else
   SESSIONNAME="$1"

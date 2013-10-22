@@ -1,11 +1,2 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =9
-let g:netrw_dirhist_1='/home/saneletm/enthenergy/source/etireports/etirweb/etirweb/templates/reports/performance'
-let g:netrw_dirhist_2='/home/saneletm/enthenergy/source/etireports/mandvapi/mandvapi'
-let g:netrw_dirhist_3='/home/saneletm/enthenergy/source/etireports/etirweb/etirweb/templates/reports/idrcharts'
-let g:netrw_dirhist_4='/home/saneletm/enthenergy/deployment/etireports/eggs/etirweb-0.9.5-py2.7.egg'
-let g:netrw_dirhist_5='/home/saneletm/enthenergy/source/etireports/etirweb/etirweb/templates/reports/idrcharts'
-let g:netrw_dirhist_6='/home/saneletm/enthenergy/source/etireports/etirweb/etirweb/templates/reports/performance'
-let g:netrw_dirhist_7='/home/saneletm/enthenergy/source/etireports/etirweb/etirweb/templates/reports/idrcharts'
-let g:netrw_dirhist_8='/home/saneletm/enthenergy/source/etireports/etirweb/etirweb/templates/reports/performance'
-let g:netrw_dirhist_9='/home/saneletm/enthenergy/source/etireports/etirweb/etirweb/static/js'
+let g:netrw_dirhist_cnt =0
