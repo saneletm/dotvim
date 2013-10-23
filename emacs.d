@@ -1,1 +1,0 @@
-/home/saneletm/.emacs.d/
