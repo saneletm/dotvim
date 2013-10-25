@@ -48,10 +48,14 @@
 (add-to-list 'load-path py-install-directory)
 (require 'python-mode)
 
-;; use IPython 
+;;IPython 
 (setq-default py-shell-name "ipython")
 (setq-default py-which-bufname "IPython")
 
 ;; sweithch to the interpreter after executing code
 (setq py-shell-switch-buffers-on-execute-p t)
 (setq py-switch-buffers-on-execute-p t)
+
+;; nxhtml
+;;(add-to-list 'load-path "~/.emacs.d/nxhtml/")
+;;(load "~/.emacs.d/nxhtml/autostart.el")
