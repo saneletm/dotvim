@@ -22,8 +22,8 @@
 
 ;; ==== Display Line numbers ====
 (require 'linum)
-(global-linum-mode 1)   ;; Make line-number mode default
-(setq linum-format "%3d ")  ;; Add line between line numbers and buffer content
+(global-linum-mode 1)  
+(setq linum-format "%3d ") 
 
 ;; ==== Activate magit ====
 (require 'magit)
@@ -32,3 +32,26 @@
 (add-to-list 'load-path "~/.emacs.d/evil")
 (require 'evil)
 (evil-mode 1)
+
+;; ==== Enable auto complete ===
+(add-to-list 'load-path "~/.emacs.d/")
+(require 'auto-complete-config)
+(add-to-list 'ac-dictionary-directories "~/.emacs.d/ac-dict")
+(ac-config-default)
+
+;; ===== Enable predictive===
+;;(add-to-list 'load-path "~/.emacs.d/predictive")
+;;(require 'predictive)
+
+;; ==== Python Mode =====
+(setq py-install-directory "~/.emacs.d/pyton-mode.el-6.1.2")
+(add-to-list 'load-path py-install-directory)
+(require 'python-mode)
+
+;; use IPython 
+(setq-default py-shell-name "ipython")
+(setq-default py-which-bufname "IPython")
+
+;; sweithch to the interpreter after executing code
+(setq py-shell-switch-buffers-on-execute-p t)
+(setq py-switch-buffers-on-execute-p t)
