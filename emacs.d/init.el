@@ -23,6 +23,7 @@
 ;; ==== Display Line numbers ====
 (require 'linum)
 (global-linum-mode 1)  
+
 (setq linum-format "%3d ") 
 
 ;; ==== Activate magit ====
@@ -63,5 +64,12 @@
 ;; Enable deft used for note taking, quickly locating/seaching/creating text files"
 (require 'deft)
 (global-set-key [f8] 'deft)
-(set deft-use-filename-as-title t)
+(setq deft-use-filename-as-title t)
+
+;; Activate and config org-mode
+(require 'org-install)
+(add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
+(define-key global-map "\C-cl" 'org-store-link)
+(define-key global-map "\C-ca" 'org-agenda)
+(setq org-log-done t)
 
