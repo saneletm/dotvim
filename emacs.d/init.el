@@ -59,3 +59,9 @@
 ;; nxhtml
 ;;(add-to-list 'load-path "~/.emacs.d/nxhtml/")
 ;;(load "~/.emacs.d/nxhtml/autostart.el")
+
+;; Enable deft used for note taking, quickly locating/seaching/creating text files"
+(require 'deft)
+(global-set-key [f8] 'deft)
+(set deft-use-filename-as-title t)
+
