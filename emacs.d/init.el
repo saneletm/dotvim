@@ -63,6 +63,9 @@
 
 ;; Enable deft used for note taking, quickly locating/seaching/creating text files"
 (require 'deft)
+(setq deft-extension "org")
+(setq deft-text-mode 'org-mode)
+(setq deft-directory "~/Dropbox/Sanele/Org-mode")
 (global-set-key [f8] 'deft)
 (setq deft-use-filename-as-title t)
 
@@ -88,7 +91,6 @@
 
 (add-to-list 'flymake-allowed-file-name-masks
                '("\\.py\\'" flymake-pylint-init)))
-
 
 ;; code checking via flymake
 ;; set code checker here from "epylint", "pyflakes"
