@@ -38,6 +38,7 @@
 (add-to-list 'load-path "~/.emacs.d/")
 (require 'auto-complete-config)
 (add-to-list 'ac-dictionary-directories "~/.emacs.d/ac-dict")
+(setq ac-auto-start t)
 (ac-config-default)
 
 ;; ===== Enable predictive===
@@ -57,7 +58,19 @@
 (setq py-shell-switch-buffers-on-execute-p t)
 (setq py-switch-buffers-on-execute-p t)
 
-;; nxhtml
+;;HTML- Set indentation level to 2
+    (add-hook 'html-mode-hook
+        (lambda ()
+          ;; Default indentation is usually 2 spaces, changing to 4.
+          (set (make-local-variable 'sgml-basic-offset) 2)))
+
+;;HTML- Turn xnml-mode for html files
+(add-hook 'html-mode-hook 'turn-on-xnml)
+
+;;HTML- Turn auto complete-mode in htm mode
+(add-hook 'html-mode-hook 'turn-on-auto-complete)
+
+;; nxhtml XXXFix BCKGRND
 ;;(add-to-list 'load-path "~/.emacs.d/nxhtml/")
 ;;(load "~/.emacs.d/nxhtml/autostart.el")
 
@@ -74,7 +87,12 @@
 (add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
 (define-key global-map "\C-cl" 'org-store-link)
 (define-key global-map "\C-ca" 'org-agenda)
+;; Optimize indentation for outline-stlye documents
+(setq org-startup-indented t)
+
 (setq org-log-done t)
+;; Auto hide leading stars
+(setq org-hide-leading-stars t)
 
 (require 'flymake)
 (add-hook 'find-file-hook 'flymake-find-file-hook)
@@ -105,3 +123,14 @@
 ;;      (list pycodechecker (list local-file))))
 ;;  (add-to-list 'flymake-allowed-file-name-masks
 ;;               '("\\.py\\'" flymake-pycodecheck-init)))
+
+
+;; SCROLL one line at a time when you move cursor past top/btm of window
+(setq scroll-conservatively 10000)
+
+;;Activate IDO Mode
+(require 'ido)
+(setq ido-enable-flex-matching t)
+(setq id-everywhere t)
+(ido-mode t)
+
