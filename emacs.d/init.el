@@ -66,10 +66,10 @@
           (set (make-local-variable 'sgml-basic-offset) 2)))
 
 ;;HTML- Turn xnml-mode for html files
-(add-hook 'html-mode-hook 'turn-on-xnml)
+(add-hook 'html-mode-hook 'xnml-mode)
 
 ;;HTML- Turn auto complete-mode in htm mode
-(add-hook 'html-mode-hook 'turn-on-auto-complete)
+(add-hook 'html-mode-hook 'auto-complete-mode)
 
 ;; nxhtml XXXFix BCKGRND
 ;;(add-to-list 'load-path "~/.emacs.d/nxhtml/")
