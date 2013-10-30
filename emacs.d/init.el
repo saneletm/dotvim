@@ -40,6 +40,7 @@
 (add-to-list 'ac-dictionary-directories "~/.emacs.d/ac-dict")
 (setq ac-auto-start t)
 (ac-config-default)
+(setq ac-disable-faces nil)
 
 ;; ===== Enable predictive===
 ;;(add-to-list 'load-path "~/.emacs.d/predictive")
