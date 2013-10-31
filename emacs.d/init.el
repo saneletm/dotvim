@@ -3,11 +3,12 @@
 ;; "~.abbrev_devs", so don't try to be too clever
 ;; by changing its name
 
-(setq-default abbrev-mode t)
-(read-abbrev-file "~/.emacs.d/abbrev_defs")
-(setq save-abbrevs t)
+;;(setq-default abbrev-mode t)
+;;(read-abbrev-file "~/.emacs.d/abbrev_defs")
+;;(setq save-abbrevs t)
 
 ;; ==== Set the highlight current line minor mode =====
+(add-to-list 'load-path "~/.emacs.d/")
 ;; Inevery buffer, the line which contains the cursor 
 ;; will be full hightlighted
 ;; (global-hl-line-mode 1)
@@ -35,7 +36,7 @@
 (evil-mode 1)
 
 ;; ==== Enable auto complete ===
-(add-to-list 'load-path "~/.emacs.d/")
+(add-to-list 'load-path "~/.emacs.d/auto-complete/")
 (require 'auto-complete-config)
 (add-to-list 'ac-dictionary-directories "~/.emacs.d/ac-dict")
 (setq ac-auto-start t)
@@ -55,7 +56,7 @@
 (setq-default py-shell-name "ipython")
 (setq-default py-which-bufname "IPython")
 
-;; sweithch to the interpreter after executing code
+;; switch to the interpreter after executing code
 (setq py-shell-switch-buffers-on-execute-p t)
 (setq py-switch-buffers-on-execute-p t)
 
@@ -71,7 +72,7 @@
 ;;HTML- Turn auto complete-mode in htm mode
 (add-hook 'html-mode-hook 'auto-complete-mode)
 
-;; nxhtml XXXFix BCKGRND
+;; NXHTML XXXFix BCKGRND
 ;;(add-to-list 'load-path "~/.emacs.d/nxhtml/")
 ;;(load "~/.emacs.d/nxhtml/autostart.el")
 
