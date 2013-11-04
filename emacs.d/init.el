@@ -35,6 +35,11 @@
 (require 'evil)
 (evil-mode 1)
 
+;;Evil Surround
+(add-to-list 'load-path "~/.emacs.d/evil-surround/")
+(require 'surround)
+(global-surround-mode 1)
+
 ;; ==== Enable auto complete ===
 (add-to-list 'load-path "~/.emacs.d/auto-complete/")
 (require 'auto-complete-config)
