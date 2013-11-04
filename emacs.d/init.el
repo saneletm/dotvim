@@ -1,8 +1,3 @@
-;; === Automatically load abbreviations table ====
-;;  Note that emacs chooses, by default, the filename
-;; "~.abbrev_devs", so don't try to be too clever
-;; by changing its name
-
 ;;(setq-default abbrev-mode t)
 ;;(read-abbrev-file "~/.emacs.d/abbrev_defs")
 ;;(setq save-abbrevs t)
@@ -30,7 +25,6 @@
 
 (package-initialize)
 
-
 ;; ==== Enable LIne and Column Numbering ====
 ;; show line -number in the mode line
 (line-number-mode 1)
@@ -44,9 +38,6 @@
 (global-linum-mode 1)  
 
 (setq linum-format "%3d ") 
-
-;; ==== Activate magit ====
-(require 'magit)
 
 ;; ==== Enable evil, vim editor emulator ====
 (add-to-list 'load-path "~/.emacs.d/site-lisp/evil")
@@ -71,6 +62,16 @@
 ;;Evil with nerd-commenter
 (setq evilnc-hotkey-comment-operator ",,")
 (evilnc-default-hotkeys)
+
+
+;;Install packages that need installation
+
+;;setup extensions XXXXWORK IN PROGRESS
+(add-to-list 'load-path "~/.emacs.d/etc/")
+(eval-after-load 'evil '(require 'setup-evil))
+
+;; ==== Activate magit ====
+(require 'magit)
 
 ;; ==== Enable auto complete ===
 (add-to-list 'load-path "~/.emacs.d/site-lisp/auto-complete/")
@@ -172,4 +173,3 @@
 (setq ido-enable-flex-matching t)
 (setq id-everywhere t)
 (ido-mode t)
-

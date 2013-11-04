@@ -121,8 +121,8 @@
 (defcustom ac-comphist-file
   (expand-file-name (concat (if (boundp 'user-emacs-directory)
                                 user-emacs-directory
-                              "~/.emacs.d/")
-                            "/ac-comphist.dat"))
+                              "~/.emacs.d/site-lisp/")
+                            "~/.emacs.d/site-lisp/ac-comphist.dat"))
   "Completion history file name."
   :type 'string
   :group 'auto-complete)
