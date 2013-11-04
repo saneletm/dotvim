@@ -65,6 +65,7 @@
 
 ;;Evil with nerd-commenter
 (setq evilnc-hotkey-comment-operator ",,")
+(evilnc-default-hotkeys)
 
 ;; ==== Enable auto complete ===
 (add-to-list 'load-path "~/.emacs.d/auto-complete/")
