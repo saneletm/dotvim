@@ -63,8 +63,22 @@
 (setq evilnc-hotkey-comment-operator ",,")
 (evilnc-default-hotkeys)
 
+;;Setup package XXXFix
+;; (require 'setup-package)
 
 ;;Install packages that need installation
+;; (defun init--install-packages ()
+;;   (packages-install
+;;    '(magit
+;;      paredit
+;;      god-mode
+;;        yasnippet)))
+
+;; (condition-case nill
+;;     (init--install-packages)
+;;   (error
+;;    (package-refresh-contents)
+;;    (init--install-packages)))
 
 ;;setup extensions XXXXWORK IN PROGRESS
 (add-to-list 'load-path "~/.emacs.d/etc/")
@@ -173,3 +187,9 @@
 (setq ido-enable-flex-matching t)
 (setq id-everywhere t)
 (ido-mode t)
+
+;;Activate yasnippet
+(add-to-list 'load-path "~/.emacs.d/site-lisp/yasnippet/")
+(require 'yasnippet)
+(yas-global-mode 1)
+;; (require yasnippet-bundle)
