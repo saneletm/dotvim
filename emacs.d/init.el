@@ -9,6 +9,11 @@
 
 ;; ==== Set the highlight current line minor mode =====
 (add-to-list 'load-path "~/.emacs.d/")
+(add-to-list 'load-path "~/.emacs.d/site-lisp/")
+;;No spalsh screen please ... jeez
+(setq inhibit-startup-message t)
+
+
 ;; Inevery buffer, the line which contains the cursor 
 ;; will be full hightlighted
 ;; (global-hl-line-mode 1)
@@ -44,17 +49,17 @@
 (require 'magit)
 
 ;; ==== Enable evil, vim editor emulator ====
-(add-to-list 'load-path "~/.emacs.d/evil")
+(add-to-list 'load-path "~/.emacs.d/site-lisp/evil")
 (require 'evil)
 (evil-mode 1)
 
 ;;Evil Surround
-(add-to-list 'load-path "~/.emacs.d/evil-surround/")
+(add-to-list 'load-path "~/.emacs.d/site-lisp/evil-surround/")
 (require 'surround)
 (global-surround-mode 1)
 
 ;;Evil numbers
-(add-to-list 'load-path "~/.emacs.d/evil-numbers/")
+(add-to-list 'load-path "~/.emacs.d/site-lisp/evil-numbers/")
 (require 'evil-numbers)
 (global-set-key (kbd "C-c =") 'evil-numbers/inc-at-pt)
 (global-set-key (kbd "C-c -") 'evil-numbers/dec-at-pt)
@@ -68,9 +73,9 @@
 (evilnc-default-hotkeys)
 
 ;; ==== Enable auto complete ===
-(add-to-list 'load-path "~/.emacs.d/auto-complete/")
+(add-to-list 'load-path "~/.emacs.d/site-lisp/auto-complete/")
 (require 'auto-complete-config)
-(add-to-list 'ac-dictionary-directories "~/.emacs.d/ac-dict")
+(add-to-list 'ac-dictionary-directories "~/.emacs.d/site-lisp/ac-dict")
 (setq ac-auto-start t)
 (ac-config-default)
 (setq ac-disable-faces nil)
