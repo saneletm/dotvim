@@ -40,6 +40,13 @@
 (require 'surround)
 (global-surround-mode 1)
 
+;;Evil numbers
+(add-to-list 'load-path "~/.emacs.d/evil-numbers/")
+(require 'evil-numbers)
+(global-set-key (kbd "C-c =") 'evil-numbers/inc-at-pt)
+(global-set-key (kbd "C-c -") 'evil-numbers/dec-at-pt)
+
+
 ;; ==== Enable auto complete ===
 (add-to-list 'load-path "~/.emacs.d/auto-complete/")
 (require 'auto-complete-config)
