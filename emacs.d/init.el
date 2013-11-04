@@ -13,6 +13,19 @@
 ;; will be full hightlighted
 ;; (global-hl-line-mode 1)
 
+
+;;Package Management
+;;Configure Marmalade
+(require 'package)
+
+;;ELPA 
+(setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
+                         ("marmalade" . "http://marmalade-repo.org/packages/")
+                         ("melpa" . "http://melpa.milkbox.net/packages/")))
+
+(package-initialize)
+
+
 ;; ==== Enable LIne and Column Numbering ====
 ;; show line -number in the mode line
 (line-number-mode 1)
@@ -46,6 +59,12 @@
 (global-set-key (kbd "C-c =") 'evil-numbers/inc-at-pt)
 (global-set-key (kbd "C-c -") 'evil-numbers/dec-at-pt)
 
+;;Evil matchit
+(require 'evil-matchit)
+(global-evil-matchit-mode 1)
+
+;;Evil with nerd-commenter
+(setq evilnc-hotkey-comment-operator ",,")
 
 ;; ==== Enable auto complete ===
 (add-to-list 'load-path "~/.emacs.d/auto-complete/")
