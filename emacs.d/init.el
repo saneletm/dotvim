@@ -8,11 +8,9 @@
 ;;No spalsh screen please ... jeez
 (setq inhibit-startup-message t)
 
-
 ;; Inevery buffer, the line which contains the cursor 
 ;; will be full hightlighted
 ;; (global-hl-line-mode 1)
-
 
 ;;Package Management
 ;;Configure Marmalade
@@ -24,9 +22,6 @@
                          ("melpa" . "http://melpa.milkbox.net/packages/")))
 
 (package-initialize)
-
-
-
 
 ;; ==== Enable Line and Column Numbering ====
 ;; show line -number in the mode line
@@ -75,7 +70,6 @@
   (packages-install
    '(magit
      paredit
-     god-mode
        yasnippet)))
 
 (condition-case nill
@@ -84,7 +78,6 @@
    (package-refresh-contents)
    (init--install-packages)))
 
-;;setup extensions XXXXWORK IN PROGRESS
 ;;(add-to-list 'load-path "~/.emacs.d/etc/")
 (eval-after-load 'evil '(require 'setup-evil))
 
