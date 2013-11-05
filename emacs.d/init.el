@@ -25,7 +25,10 @@
 
 (package-initialize)
 
-;; ==== Enable LIne and Column Numbering ====
+
+
+
+;; ==== Enable Line and Column Numbering ====
 ;; show line -number in the mode line
 (line-number-mode 1)
 
@@ -64,21 +67,21 @@
 (evilnc-default-hotkeys)
 
 ;;Setup package XXXFix
-;; (require 'setup-package)
+(require 'setup-package)
 
 ;;Install packages that need installation
-;; (defun init--install-packages ()
-;;   (packages-install
-;;    '(magit
-;;      paredit
-;;      god-mode
-;;        yasnippet)))
+(defun init--install-packages ()
+  (packages-install
+   '(magit
+     paredit
+     god-mode
+       yasnippet)))
 
-;; (condition-case nill
-;;     (init--install-packages)
-;;   (error
-;;    (package-refresh-contents)
-;;    (init--install-packages)))
+(condition-case nill
+    (init--install-packages)
+  (error
+   (package-refresh-contents)
+   (init--install-packages)))
 
 ;;setup extensions XXXXWORK IN PROGRESS
 (add-to-list 'load-path "~/.emacs.d/etc/")
