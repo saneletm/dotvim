@@ -67,6 +67,7 @@
 (evilnc-default-hotkeys)
 
 ;;Setup package XXXFix
+(add-to-list 'load-path "~/.emacs.d/etc/")
 (require 'setup-package)
 
 ;;Install packages that need installation
@@ -84,7 +85,7 @@
    (init--install-packages)))
 
 ;;setup extensions XXXXWORK IN PROGRESS
-(add-to-list 'load-path "~/.emacs.d/etc/")
+;;(add-to-list 'load-path "~/.emacs.d/etc/")
 (eval-after-load 'evil '(require 'setup-evil))
 
 ;; ==== Activate magit ====
