@@ -5,10 +5,11 @@
 ;; ==== Set the highlight current line minor mode =====
 (add-to-list 'load-path "~/.emacs.d/")
 (add-to-list 'load-path "~/.emacs.d/site-lisp/")
-;;No spalsh screen please ... jeez
-(setq inhibit-startup-message t)
 
-;; Inevery buffer, the line which contains the cursor 
+;;No spalsh screen please ... jeez
+;;(setq inhibit-startup-message t)
+
+;; In every buffer, the line which contains the cursor 
 ;; will be full hightlighted
 ;; (global-hl-line-mode 1)
 
@@ -23,6 +24,30 @@
 
 (package-initialize)
 
+;;Setup package XXXFix
+(add-to-list 'load-path "~/.emacs.d/etc/")
+(require 'setup-package)
+
+;;Install packages that need installation
+(defun init--install-packages ()
+  (packages-install
+   '(magit
+     paredit
+     evil-matchit
+     evil-nerd-commenter
+     evil-visualstar
+     evil-paredit
+       yasnippet)))
+
+;; configure auto load of evil-paredit XXXFix
+(require 'evil-paredit)
+
+(condition-case nill
+    (init--install-packages)
+  (error
+   (package-refresh-contents)
+   (init--install-packages)))
+
 ;; ==== Enable Line and Column Numbering ====
 ;; show line -number in the mode line
 (line-number-mode 1)
@@ -36,6 +61,9 @@
 (global-linum-mode 1)  
 
 (setq linum-format "%3d ") 
+
+;;(add-to-list 'load-path "~/.emacs.d/etc/")
+(eval-after-load 'evil '(require 'setup-evil))
 
 ;; ==== Enable evil, vim editor emulator ====
 (add-to-list 'load-path "~/.emacs.d/site-lisp/evil")
@@ -61,27 +89,7 @@
 (setq evilnc-hotkey-comment-operator ",,")
 (evilnc-default-hotkeys)
 
-;;Setup package XXXFix
-(add-to-list 'load-path "~/.emacs.d/etc/")
-(require 'setup-package)
-
-;;Install packages that need installation
-(defun init--install-packages ()
-  (packages-install
-   '(magit
-     paredit
-       yasnippet)))
-
-(condition-case nill
-    (init--install-packages)
-  (error
-   (package-refresh-contents)
-   (init--install-packages)))
-
-;;(add-to-list 'load-path "~/.emacs.d/etc/")
-(eval-after-load 'evil '(require 'setup-evil))
-
-;; ==== Activate magit ====
+;; ====Activate magit====
 (require 'magit)
 
 ;; ==== Enable auto complete ===
@@ -97,7 +105,7 @@
 ;;(require 'predictive)
 
 ;; ==== Python Mode =====
-(setq py-install-directory "~/.emacs.d/pyton-mode.el-6.1.2")
+(setq py-install-directory "~/.emacs.d/site-lisp/python-mode.el-6.1.2")
 (add-to-list 'load-path py-install-directory)
 (require 'python-mode)
 
