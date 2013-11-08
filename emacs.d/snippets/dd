@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: <dd>...</dd>
+# key: dd
+# binding: direct-keybinding
+# expand-env: ((some-var some-value))
+# type: command
+# --
+<dd>$1</dd>
