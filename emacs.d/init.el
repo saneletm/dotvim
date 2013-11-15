@@ -6,6 +6,10 @@
 (add-to-list 'load-path "~/.emacs.d/")
 (add-to-list 'load-path "~/.emacs.d/site-lisp/")
 
+;; activate meta key for mac
+(set-keyboard-coding-system nil)
+
+
 ;;No spalsh screen please ... jeez
 ;;(setq inhibit-startup-message t)
 
@@ -37,16 +41,17 @@
      evil-nerd-commenter
      evil-visualstar
      evil-paredit
+     jedi
        yasnippet)))
-
-;; configure auto load of evil-paredit XXXFix
-(require 'evil-paredit)
 
 (condition-case nill
     (init--install-packages)
   (error
    (package-refresh-contents)
    (init--install-packages)))
+
+;; configure auto load of evil-paredit XXXFix
+(require 'evil-paredit)
 
 ;; ==== Enable Line and Column Numbering ====
 ;; show line -number in the mode line
@@ -58,7 +63,7 @@
 
 ;; ==== Display Line numbers ====
 (require 'linum)
-(global-linum-mode 1)  
+(global-linum-mode t)  
 
 (setq linum-format "%3d ") 
 
@@ -109,6 +114,10 @@
 (add-to-list 'load-path py-install-directory)
 (require 'python-mode)
 
+;;Disable both tool-bar and menu-bar modes
+(tool-bar-mode -1)
+(menu-bar-mode -1)
+
 ;;IPython 
 (setq-default py-shell-name "ipython")
 (setq-default py-which-bufname "IPython")
@@ -124,7 +133,7 @@
           (set (make-local-variable 'sgml-basic-offset) 2)))
 
 ;;HTML- Turn xnml-mode for html files
-(add-hook 'html-mode-hook 'xnml-mode)
+;;(add-hook 'html-mode-hook 'xnml-mode)
 
 ;;HTML- Turn auto complete-mode in htm mode
 (add-hook 'html-mode-hook 'auto-complete-mode)
@@ -198,3 +207,16 @@
 (require 'yasnippet)
 (yas-global-mode 1)
 ;; (require yasnippet-bundle)
+
+;; Configure Python-Jedi -- Auto Completion and python-code viewer
+(add-hook 'python-mode-hook 'jedi:setup)
+(setq jedi:setup-keys t)                      ; optional
+(setq jedi:complete-on-dot t)             ; optional
+
+;; loading emacs-for-python
+;
+;;(load-file "~/.emacs.d/site-lisp/emacs-py/epy-init.el")
+
+;; Use emacs to refresh ur browser
+(add-to-list 'load-path "~/.emacs.d/site-lisp/xrefresh-emacs/")
+(require 'xrefresh)(xrefresh-start)

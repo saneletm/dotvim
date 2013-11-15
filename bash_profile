@@ -7,6 +7,7 @@ alias __git_ps1="git branch 2>/dev/null | grep '*' | sed 's/* \(.*\)/(\1)/'"
 alias ls='ls -G'
 alias gt='git status'
 alias gb='git branch'
+alias em='emacs'
 
 
 PS1="\[\033[01;32m\]\u\[\033[00m\]:\[\033[01;31m\]\W\[\033[32m\]\$(parse_git_branch) \[\033[00m\]$ "
@@ -36,3 +37,4 @@ fi
 function renamei2tab {
   echo -ne "\033]0;"$*"\007"
 }
+source /usr/local/bin/virtualenvwrapper.sh
