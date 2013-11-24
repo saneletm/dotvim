@@ -42,7 +42,9 @@
      evil-visualstar
      evil-paredit
      jedi
-       yasnippet)))
+     yasnippet
+     pandoc-mode
+     )))
 
 (condition-case nill
     (init--install-packages)
@@ -220,3 +222,6 @@
 ;; Use emacs to refresh ur browser
 (add-to-list 'load-path "~/.emacs.d/site-lisp/xrefresh-emacs/")
 (require 'xrefresh)(xrefresh-start)
+
+;; Pandoc is a haskell implemented markup converter. usefull in resume writting.
+(load "pandoc-mode") ;; add to tex-mode-hook
