@@ -225,3 +225,6 @@
 
 ;; Pandoc is a haskell implemented markup converter. usefull in resume writting.
 (load "pandoc-mode") ;; add to tex-mode-hook
+
+;; Enable current parenthesis matching
+(show-paren-mode 1)
