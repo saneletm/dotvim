@@ -220,8 +220,8 @@
 ;;(load-file "~/.emacs.d/site-lisp/emacs-py/epy-init.el")
 
 ;; Use emacs to refresh ur browser
-(add-to-list 'load-path "~/.emacs.d/site-lisp/xrefresh-emacs/")
-(require 'xrefresh)(xrefresh-start)
+;;(add-to-list 'load-path "~/.emacs.d/site-lisp/xrefresh-emacs/")
+;;(require 'xrefresh)(xrefresh-start)
 
 ;; Pandoc is a haskell implemented markup converter. usefull in resume writting.
 (load "pandoc-mode") ;; add to tex-mode-hook
