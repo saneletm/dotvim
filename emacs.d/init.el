@@ -44,6 +44,7 @@
      jedi
      yasnippet
      pandoc-mode
+     ein
      )))
 
 (condition-case nill
@@ -228,3 +229,4 @@
 
 ;; Enable current parenthesis matching
 (show-paren-mode 1)
+(require 'ein)
