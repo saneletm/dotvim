@@ -9,7 +9,6 @@
 ;; activate meta key for mac
 (set-keyboard-coding-system nil)
 
-
 ;;No spalsh screen please ... jeez
 ;;(setq inhibit-startup-message t)
 
@@ -44,6 +43,8 @@
      jedi
      yasnippet
      pandoc-mode
+     flycheck
+     pylint
      ein
      )))
 
@@ -136,7 +137,7 @@
           (set (make-local-variable 'sgml-basic-offset) 2)))
 
 ;;HTML- Turn xnml-mode for html files
-;;(add-hook 'html-mode-hook 'xnml-mode)
+(add-hook 'html-mode-hook 'xnml-mode)
 
 ;;HTML- Turn auto complete-mode in htm mode
 (add-hook 'html-mode-hook 'auto-complete-mode)
@@ -169,17 +170,17 @@
 (add-hook 'find-file-hook 'flymake-find-file-hook)
 
 ;; Enable epylint checking 
-(when (load "flymake" t)
-      (defun flymake-pylint-init ()
-        (let* ((temp-file (flymake-init-create-temp-buffer-copy
-                           'flymake-create-temp-inplace))
-           (local-file (file-relative-name
-                        temp-file
-                        (file-name-directory buffer-file-name))))
-          (list "epylint" (list local-file))))
+#(when (load "flymake" t)
+#      (defun flymake-pylint-init ()
+#        (let* ((temp-file (flymake-init-create-temp-buffer-copy
+#                           'flymake-create-temp-inplace))
+#           (local-file (file-relative-name
+#                        temp-file
+#                        (file-name-directory buffer-file-name))))
+#          (list "epylint" (list local-file))))
 
-(add-to-list 'flymake-allowed-file-name-masks
-               '("\\.py\\'" flymake-pylint-init)))
+#(add-to-list 'flymake-allowed-file-name-masks
+#               '("\\.py\\'" flymake-pylint-init)))
 
 ;; code checking via flymake
 ;; set code checker here from "epylint", "pyflakes"
@@ -229,4 +230,8 @@
 
 ;; Enable current parenthesis matching
 (show-paren-mode 1)
+
+(require 'flycheck)
+(require 'pylint)
+
 (require 'ein)
