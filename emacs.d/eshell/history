@@ -10,3 +10,9 @@ em
 ems
 ls
 man man
+~/.emacs.d/jslint-reporter test.js
+~/.emacs.d/jslint-reporter/jslint-reporter test.js
+ls
+pwd
+ls
+exit

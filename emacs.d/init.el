@@ -166,8 +166,8 @@
 ;; Auto hide leading stars
 (setq org-hide-leading-stars t)
 
-(require 'flymake)
-(add-hook 'find-file-hook 'flymake-find-file-hook)
+;;(require 'flymake)
+;;(add-hook 'find-file-hook 'flymake-find-file-hook)
 
 ;; Enable epylint checking 
 ;;(when (load "flymake" t)
@@ -235,3 +235,19 @@
 (require 'pylint)
 
 (require 'ein)  ;; ipython notebook
+
+
+;; JavaScript Flycheck with JSLint
+
+(require 'flycheck)
+(flycheck-define-checker javascript-jslint-reporter
+  "A JavaScript syntax and style checker based on JSLint Reporter.
+
+See URL `https://github.com/FND/jslint-reporter'."
+  :command ("~/.emacs.d/jslint-reporter/jslint-reporter" source)
+  :error-patterns
+  ((error line-start (1+ nonl) ":" line ":" column ":" (message) line-end))
+  :modes (js-mode js2-mode js3-mode))
+(add-hook 'js-mode-hook (lambda ()
+                          (flycheck-select-checker 'javascript-jslint-reporter)
+                          (flycheck-mode)))
