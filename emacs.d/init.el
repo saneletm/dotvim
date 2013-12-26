@@ -166,37 +166,6 @@
 ;; Auto hide leading stars
 (setq org-hide-leading-stars t)
 
-(require 'flymake)
-(add-hook 'find-file-hook 'flymake-find-file-hook)
-
-;; Enable epylint checking 
-;;(when (load "flymake" t)
-;;      (defun flymake-pylint-init ()
-;;        (let* ((temp-file (flymake-init-create-temp-buffer-copy
-;;                           'flymake-create-temp-inplace))
-;;           (local-file (file-relative-name
-;;                        temp-file
-;;                        (file-name-directory buffer-file-name))))
-;;          (list "epylint" (list local-file))))
-
-;; (add-to-list 'flymake-allowed-file-name-masks
-              ;; '("\\.py\\'" flymake-pylint-init))
-
-;; code checking via flymake
-;; set code checker here from "epylint", "pyflakes"
-;; (setq pycodechecker "pyflakes")
-(when (load "flymake" t)
- (defun flymake-pycodecheck-init ()
-   (let* ((temp-file (flymake-init-create-temp-buffer-copy
-                      'flymake-create-temp-inplace))
-          (local-file (file-relative-name
-                       temp-file
-                       (file-name-directory buffer-file-name))))
-     (list pycodechecker (list local-file))))
- (add-to-list 'flymake-allowed-file-name-masks
-              '("\\.py\\'" flymake-pycodecheck-init)))
-
-
 ;; SCROLL one line at a time when you move cursor past top/btm of window
 (setq scroll-conservatively 10000)
 
@@ -238,7 +207,6 @@
 
 
 ;; JavaScript Flycheck with JSLint
-
 (require 'flycheck)
 (flycheck-define-checker javascript-jslint-reporter
   "A JavaScript syntax and style checker based on JSLint Reporter.
