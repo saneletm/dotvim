@@ -46,6 +46,7 @@
      flycheck
      pylint
      ein
+     git-gutter
      )))
 
 (condition-case nill
@@ -219,3 +220,6 @@ See URL `https://github.com/FND/jslint-reporter'."
 (add-hook 'js-mode-hook (lambda ()
                           (flycheck-select-checker 'javascript-jslint-reporter)
                           (flycheck-mode)))
+
+;; emacs git gutter to show git diff (use fringe)
+(global-git-gutter-mode +1)
