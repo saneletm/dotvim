@@ -166,8 +166,8 @@
 ;; Auto hide leading stars
 (setq org-hide-leading-stars t)
 
-;;(require 'flymake)
-;;(add-hook 'find-file-hook 'flymake-find-file-hook)
+(require 'flymake)
+(add-hook 'find-file-hook 'flymake-find-file-hook)
 
 ;; Enable epylint checking 
 ;;(when (load "flymake" t)
@@ -179,22 +179,22 @@
 ;;                        (file-name-directory buffer-file-name))))
 ;;          (list "epylint" (list local-file))))
 
-;;(add-to-list 'flymake-allowed-file-name-masks
-;;               '("\\.py\\'" flymake-pylint-init)))
+;; (add-to-list 'flymake-allowed-file-name-masks
+              ;; '("\\.py\\'" flymake-pylint-init))
 
 ;; code checking via flymake
 ;; set code checker here from "epylint", "pyflakes"
-;;(setq pycodechecker "pyflakes")
-;;(when (load "flymake" t)
-;;  (defun flymake-pycodecheck-init ()
-;;    (let* ((temp-file (flymake-init-create-temp-buffer-copy
-;;                       'flymake-create-temp-inplace))
-;;           (local-file (file-relative-name
-;;                        temp-file
-;;                        (file-name-directory buffer-file-name))))
-;;      (list pycodechecker (list local-file))))
-;;  (add-to-list 'flymake-allowed-file-name-masks
-;;               '("\\.py\\'" flymake-pycodecheck-init)))
+;; (setq pycodechecker "pyflakes")
+(when (load "flymake" t)
+ (defun flymake-pycodecheck-init ()
+   (let* ((temp-file (flymake-init-create-temp-buffer-copy
+                      'flymake-create-temp-inplace))
+          (local-file (file-relative-name
+                       temp-file
+                       (file-name-directory buffer-file-name))))
+     (list pycodechecker (list local-file))))
+ (add-to-list 'flymake-allowed-file-name-masks
+              '("\\.py\\'" flymake-pycodecheck-init)))
 
 
 ;; SCROLL one line at a time when you move cursor past top/btm of window
