@@ -224,6 +224,9 @@ See URL `https://github.com/FND/jslint-reporter'."
 
 ;; emacs git gutter to show git diff (use fringe)
 (global-git-gutter-mode +1)
+;; (add-to-list 'load-path "~/.emacs.d/site-lisp/git-gutter-fringe/")
+;; (require 'git-gutter-fringe) 
+(require 'fringe-helper)
 
 ;;LATEX
 ;;reftex
