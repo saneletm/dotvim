@@ -48,6 +48,7 @@
      ein
      git-gutter
      auctex ;; latex menu for file inputs
+     projectile ;; project interaction library
      )))
 
 (condition-case nill
