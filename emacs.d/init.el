@@ -62,11 +62,11 @@
 (tool-bar-mode -1)
 (menu-bar-mode -1)
 
-;; ==== Enable Line and Column Numbering ====
+;; Enable Line and Column Numbering 
 ;; show line -number in the mode line
 (line-number-mode 1)
 
-;; ==== Set the  fill column ====
+;; Set the  fill column
 ;; enable backup files .
 (setq-default fill-column 72)
 
@@ -74,6 +74,12 @@
 (require 'linum)
 (global-linum-mode t)  
 (setq linum-format "%3d ") 
+
+;; SCROLL one line at a time when you move cursor past top/btm of window
+(setq scroll-conservatively 10000)
+
+;; Enable current parenthesis matching, when cursor is on pair
+(show-paren-mode 1)
 
 ;; Flycheck
 (require 'flycheck)
@@ -84,6 +90,12 @@
 ;; Activate magit
 (require 'magit)
 
+;; Activate IDO Mode
+(require 'ido)
+(setq ido-enable-flex-matching t)
+(setq id-everywhere t)
+(ido-mode t)
+
 ;; Enable auto complete 
 (add-to-list 'load-path "~/.emacs.d/site-lisp/auto-complete/")
 (require 'auto-complete-config)
@@ -91,6 +103,31 @@
 (setq ac-auto-start t)
 (ac-config-default)
 (setq ac-disable-faces nil)
+
+;; Paredit
+;; lisp code
+(autoload 'enable-paredit-mode "paredit" "Turn on pseudo-structural editing of Lisp code." t)
+(add-hook 'emacs-lisp-mode-hook       #'enable-paredit-mode)
+(add-hook 'eval-expression-minibuffer-setup-hook #'enable-paredit-mode)
+(add-hook 'ielm-mode-hook             #'enable-paredit-mode)
+(add-hook 'lisp-mode-hook             #'enable-paredit-mode)
+(add-hook 'lisp-interaction-mode-hook #'enable-paredit-mode)
+(add-hook 'scheme-mode-hook           #'enable-paredit-mode)
+
+;; Autopairs
+(require 'setup-autopairs)
+
+;; emacs Git Gutter to show git diff (use fringe)
+(global-git-gutter-mode +1)
+;; (add-to-list 'load-path "~/.emacs.d/site-lisp/git-gutter-fringe/")
+;; (require 'git-gutter-fringe) 
+(require 'fringe-helper)
+
+;; Activate yasnippet
+(add-to-list 'load-path "~/.emacs.d/site-lisp/yasnippet/")
+(require 'yasnippet)
+(yas-global-mode 1)
+;; (require yasnippet-bundle)
 
 ;; Python
 (require 'setup-python)
@@ -100,6 +137,13 @@
 
 ;; JavaScript Flycheck with JSLint
 (require 'setup-js)
+
+;; LATEX
+(require 'setup-latex)
+
+;; Use emacs to refresh ur browser
+;;(add-to-list 'load-path "~/.emacs.d/site-lisp/xrefresh-emacs/")
+;;(require 'xrefresh)(xrefresh-start)
 
 ;; Enable deft used for note taking, quickly locating/seaching/creating text files"
 (require 'deft)
@@ -116,54 +160,9 @@
 (define-key global-map "\C-ca" 'org-agenda)
 ;; Optimize indentation for outline-stlye documents
 (setq org-startup-indented t)
-
 (setq org-log-done t)
 ;; Auto hide leading stars
 (setq org-hide-leading-stars t)
 
-;; SCROLL one line at a time when you move cursor past top/btm of window
-(setq scroll-conservatively 10000)
-
-;; Activate IDO Mode
-(require 'ido)
-(setq ido-enable-flex-matching t)
-(setq id-everywhere t)
-(ido-mode t)
-
-;; Activate yasnippet
-(add-to-list 'load-path "~/.emacs.d/site-lisp/yasnippet/")
-(require 'yasnippet)
-(yas-global-mode 1)
-;; (require yasnippet-bundle)
-
-;; Use emacs to refresh ur browser
-;;(add-to-list 'load-path "~/.emacs.d/site-lisp/xrefresh-emacs/")
-;;(require 'xrefresh)(xrefresh-start)
-
 ;; Pandoc is a haskell implemented markup converter. usefull in resume writting.
 (load "pandoc-mode") ;; add to tex-mode-hook
-
-;; Enable current parenthesis matching
-(show-paren-mode 1)
-
-;; emacs Git Gutter to show git diff (use fringe)
-(global-git-gutter-mode +1)
-;; (add-to-list 'load-path "~/.emacs.d/site-lisp/git-gutter-fringe/")
-;; (require 'git-gutter-fringe) 
-(require 'fringe-helper)
-
-;; LATEX
-(require 'setup-latex)
-
-;; Paredit
-;; lisp code
-(autoload 'enable-paredit-mode "paredit" "Turn on pseudo-structural editing of Lisp code." t)
-(add-hook 'emacs-lisp-mode-hook       #'enable-paredit-mode)
-(add-hook 'eval-expression-minibuffer-setup-hook #'enable-paredit-mode)
-(add-hook 'ielm-mode-hook             #'enable-paredit-mode)
-(add-hook 'lisp-mode-hook             #'enable-paredit-mode)
-(add-hook 'lisp-interaction-mode-hook #'enable-paredit-mode)
-(add-hook 'scheme-mode-hook           #'enable-paredit-mode)
-
-;; Autopairs
-(require 'setup-autopairs)
