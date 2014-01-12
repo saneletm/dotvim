@@ -1,10 +1,10 @@
-;;Setup file for all python plugins, extension, modes etc
-
-;; ==== Enable evil, vim editor emulator ====
-(add-to-list 'load-path "~/.emacs.d/")
+;; Enable evil, vim editor emulator 
 (add-to-list 'load-path "~/.emacs.d/site-lisp/evil")
 (require 'evil)
 (evil-mode 1)
+
+;; configure auto load of evil-paredit XXXFix
+(require 'evil-paredit)
 
 ;;Evil Surround
 (add-to-list 'load-path "~/.emacs.d/site-lisp/evil-surround/")
