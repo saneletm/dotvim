@@ -11,7 +11,7 @@
 (set-keyboard-coding-system nil)
 
 ;; No spalsh screen please ... jeez
- (setq inhibit-startup-message t)
+;; (setq inhibit-startup-message t)
 
 ;; In every buffer, the line which contains the cursor 
 ;; will be full hightlighted
