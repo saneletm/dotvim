@@ -50,6 +50,7 @@
      git-gutter
      auctex ;; latex menu for file inputs
      projectile ;; project interaction library
+     flx-ido ;; fixes ido for projectile
      )))
 
 (condition-case nill
@@ -141,9 +142,14 @@
 ;; LATEX
 (require 'setup-latex)
 
-;; Use emacs to refresh ur browser
-;;(add-to-list 'load-path "~/.emacs.d/site-lisp/xrefresh-emacs/")
-;;(require 'xrefresh)(xrefresh-start)
+;; Use emacs to refresh your browser
+;; (add-to-list 'load-path "~/.emacs.d/site-lisp/xrefresh-emacs/")
+;; (require 'xrefresh)(xrefresh-start)
+
+;; Projectile
+;; Projectile with flx-ido can waste a lot of memory
+;; see setupfile, and documentation
+(require 'setup-projectile)
 
 ;; Enable deft used for note taking, quickly locating/seaching/creating text files"
 (require 'deft)
