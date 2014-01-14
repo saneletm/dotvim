@@ -139,6 +139,9 @@
 ;; JavaScript Flycheck with JSLint
 (require 'setup-js)
 
+;;Less-CSS
+(eval-after-load "less-css" (require 'setup-less-css)) 
+
 ;; LATEX
 (require 'setup-latex)
 
@@ -149,7 +152,8 @@
 ;; Projectile
 ;; Projectile with flx-ido can waste a lot of memory
 ;; see setupfile, and documentation
-(eval-after-load "projectile" (require 'setup-projectile)) 
+;; (eval-after-load "projectile" (require 'setup-projectile)) 
+(require 'setup-projectile) ;; Temp sln... need eval-after-load
 
 ;; Enable deft used for note taking, quickly locating/seaching/creating text files"
 (require 'deft)
