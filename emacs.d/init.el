@@ -149,7 +149,7 @@
 ;; Projectile
 ;; Projectile with flx-ido can waste a lot of memory
 ;; see setupfile, and documentation
-(require 'setup-projectile)
+(eval-after-load "projectile" (require 'setup-projectile)) 
 
 ;; Enable deft used for note taking, quickly locating/seaching/creating text files"
 (require 'deft)
