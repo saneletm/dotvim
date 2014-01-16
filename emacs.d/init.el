@@ -182,4 +182,3 @@
 (require 'sr-speedbar)
 ;; Nav (nav.el)
 ;; (require 'nav) ;; Doesn't show classes and functions
-
