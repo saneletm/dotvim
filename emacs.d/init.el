@@ -176,3 +176,6 @@
 
 ;; Pandoc is a haskell implemented markup converter. usefull in resume writting.
 (load "pandoc-mode") ;; add to tex-mode-hook
+
+;; sr-speedbar
+(require 'sr-speedbar)
