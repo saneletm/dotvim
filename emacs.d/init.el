@@ -177,5 +177,9 @@
 ;; Pandoc is a haskell implemented markup converter. usefull in resume writting.
 (load "pandoc-mode") ;; add to tex-mode-hook
 
+;; Emacs Code Navigation
 ;; sr-speedbar
 (require 'sr-speedbar)
+;; Nav (nav.el)
+;; (require 'nav) ;; Doesn't show classes and functions
+
