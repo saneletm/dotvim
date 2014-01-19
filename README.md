@@ -3,11 +3,10 @@ README.md
 This is a repository for my linux configuration (SO, IT IS MISSNAMED)
 files which include  
 
- * _vim files (.vim and plugins)_
- * _bash profile: mac files (.bash_profile)_
- * _lxterminal ("locate")_
- * _tmux config (.tmux.conf)_
- * _emacs config (.emacs, dotelips)_
+ * vim 
+ * emacs
+ * bash profile (mac) 
+ * tmux
 
 ###Setting up
 ---
