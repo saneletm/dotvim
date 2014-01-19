@@ -40,8 +40,8 @@ files which include
 
 ### Panding Documentation
 List of modules/plugins in:
-* emacs
-* vim
+* emacs  
+* vim  
 Overview of 
 * bash_profile customisations
 * tmux customisations
