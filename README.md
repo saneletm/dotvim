@@ -42,5 +42,6 @@ files which include
 List of modules/plugins in:
 * emacs
 * vim
-* overview of bash_profile customisations
-* overview of tmux customisations
+Overview of 
+* bash_profile customisations
+* tmux customisations
