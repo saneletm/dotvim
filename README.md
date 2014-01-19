@@ -39,9 +39,8 @@ files which include
 
 
 ### Panding Documentation
-#### List of modules/plugins in:
-* emacs  
-* vim  
-#### Overview of 
-* bash_profile customisations
-* tmux customisations
+
+* List of modules/plugins in emacs  
+* List of modules/plugins in vim  
+* Overview of bash_profile customisations
+* Overview of tmux customisations
