@@ -17,15 +17,26 @@ files which include
 
   git clone git://github.com/saneletm/dotvim.git ~/.vim
 
+
+####Note
+  This repository is no longer mantained. 
+  A better way to rename and organise it will be
+  to: 
+  * rename it "unixconfigs" Within the unixconfigs dir., have emacs, vim, tmux,
+  bash directories amongst others
+
+  * Clone this to ~/.unixconfigs/
+  * And then do the syn links 
+
+
 #####Create symlinks:
 ......
 
-  * ln -s ~/.vim/vimrc ~/.vimrc
-  * ln -s ~/.vim/tmux.conf ~/.tmux.conf 
-  * ln -s ~/.vim/dotemacs ~/.emacs
-  * ln -s ~/.vim/dotelips ~/.elips
-  * ln -s ~/.vim/gvimrc ~/.gvimrc
-  * ln -s ~/.vim/bash_profile ~/.bash_profile ### for mac 
+  * ln -s ~/unixconfigs/emacs/ ~/.emacs
+  * ln -s ~/unixconfigs/vim/ ~/vim
+  * ln -s ~/unixconfigs/vim/vimrc ~/.vimrc
+  * ln -s ~/unixconfigs/tmux/tmux.conf ~/.tmux.conf 
+  * ln -s ~/unixconfigs/bash/bash_profile ~/.bash_profile ### for mac 
 
 #####Switch to the `~/.vim` directory, and fetch vim submodules:
 ......
@@ -34,12 +45,3 @@ files which include
   * git submodule init
   * git submodule update
 
-####Note
-  This repository is no longer mantained. 
-  A better way to rename and organise it will be
-  to: 
-  * call it "unixconfigs" Within the unixconfigs dir., have emacs, vim, tmux,
-  bash directories amongst others
-
-  * Clone this to ~/.unixconfigs/
-  * And then do the syn links above
