@@ -12,8 +12,6 @@ files which include
 ---
 
 #####Cloning:
-......
-
   git clone git://github.com/saneletm/dotvim.git ~/.vim
 
 
@@ -29,8 +27,6 @@ files which include
 
 
 #####Create symlinks:
-......
-
   * ln -s ~/unixconfigs/emacs/ ~/.emacs
   * ln -s ~/unixconfigs/vim/ ~/vim
   * ln -s ~/unixconfigs/vim/vimrc ~/.vimrc
