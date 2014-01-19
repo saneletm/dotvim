@@ -1,6 +1,6 @@
 README.md
 -----------------------
-This is a repository for my linux configuration (SO, IT IS MISSNAMED)
+This is a repository for my unix configuration (SO, IT IS MISSNAMED)
 files which include  
 
  * vim 
