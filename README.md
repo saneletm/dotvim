@@ -1,7 +1,7 @@
 README.md
 -----------------------
-This is a repository for my linux configuration
-files which include 
+This is a repository for my linux configuration (SO, IT IS MISSNAMED)
+files which include  
 
  * _vim files (.vim and plugins)_
  * _bash profile: mac files (.bash_profile)_
@@ -33,3 +33,10 @@ files which include
   * cd ~/.vim
   * git submodule init
   * git submodule update
+
+####Note
+  This repository is no longer mantained. 
+  A better way to rename and organise it will be
+  to call it "unixconfigs"
+  Within the unixconfigs dir., have emacs, vim, tmux,
+  bash directories amongst others
