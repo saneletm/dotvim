@@ -37,3 +37,10 @@ files which include
   * git submodule init
   * git submodule update
 
+
+### Panding Documentation
+List of modules/plugins in:
+* emacs
+* vim
+* overview of bash_profile customisations
+* overview of tmux customisations
