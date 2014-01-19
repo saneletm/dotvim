@@ -37,6 +37,9 @@ files which include
 ####Note
   This repository is no longer mantained. 
   A better way to rename and organise it will be
-  to call it "unixconfigs"
-  Within the unixconfigs dir., have emacs, vim, tmux,
+  to: 
+  * call it "unixconfigs" Within the unixconfigs dir., have emacs, vim, tmux,
   bash directories amongst others
+
+  * Clone this to ~/.unixconfigs/
+  * And then do the syn links above
