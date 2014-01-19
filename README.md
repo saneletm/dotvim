@@ -10,7 +10,6 @@ files which include
 
 ###Setting up
 ---
-
 #####Cloning:
   git clone git://github.com/saneletm/dotvim.git ~/.vim
 
@@ -34,8 +33,6 @@ files which include
   * ln -s ~/unixconfigs/bash/bash_profile ~/.bash_profile ### for mac 
 
 #####Switch to the `~/.vim` directory, and fetch vim submodules:
-......
-
   * cd ~/.vim
   * git submodule init
   * git submodule update
