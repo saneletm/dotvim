@@ -135,6 +135,7 @@
 
 ;; HTML
 (require 'setup-html)
+;; (require 'setup-web-mode) ;; for html file extensions
 
 ;; JavaScript Flycheck with JSLint
 (require 'setup-js)
